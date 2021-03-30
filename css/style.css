@@ -46,14 +46,17 @@ body {
     border: none;
 
     border-bottom:  1px solid #000;
-
-    background-image: url("../img/error_24px_outlined.svg");
-    background-repeat: no-repeat;
-    background-position: right;
 }
 
 .form input:focus {
     outline: 0;
+    box-shadow: none;
+}
+
+.form input.error {
+    background-image: url("../img/error_24px_outlined.svg");
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .form button {
@@ -78,3 +81,11 @@ body {
     transition: .3s;
 }
 
+.data {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.data p + p {
+    margin-top: 5px;
+}
