@@ -8,3 +8,14 @@ Fiz esse projeto a partir dos conhecimentos em requisições AJAX. Nele, você p
 -	CSS
 -	Javascript
 	-	Axios
+## Como utilizar:
+-	Para rodar esse desafio você deve ter instalado o [Git](https://git-scm.com/) e o plugin [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+```
+# clone este repositório
+$ git clone git@github.com:victorambrozi/consultar-cep.git
+
+# Entre no repositório
+$ cd consultar-cep
+
+# Abra com o Live Server no VSCode
+```
