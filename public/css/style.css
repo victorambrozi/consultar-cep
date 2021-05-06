@@ -8,8 +8,10 @@
 
 body {
     background: linear-gradient(112.93deg, #000000 0.67%, rgba(0, 56, 255, 0) 127.94%);
+    background-repeat: no-repeat;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -23,6 +25,10 @@ body {
 
     border-radius: 20px;
     background-color: #fff;
+}
+
+.container:nth-child(2) {
+    margin-top: 20px;
 }
 
 .container h1 {
