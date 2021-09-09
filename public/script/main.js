@@ -3,22 +3,24 @@ const zipCodeField = document.querySelector("#cep");
 const dataZipCode = document.querySelector(".data");
 
 button.addEventListener("click", event => {
-    event.preventDefault();
+    event.preventDefault()
 
-    let zipCodeValue = zipCodeField.value;
+    let zipCodeValue = zipCodeField.value
 
-    // limpando o cep
-    zipCodeValue = zipCodeValue.replace(' ', '');
-    zipCodeValue = zipCodeValue.replace('.', '');
-    zipCodeValue = zipCodeValue.replace('-', '');
-    zipCodeValue = zipCodeValue.trim();
+    zipCodeValue = zipCodeValue.replace(' ', '')
+    zipCodeValue = zipCodeValue.replace('.', '')
+    zipCodeValue = zipCodeValue.replace('-', '')
+
+    zipCodeValue = zipCodeValue.trim()
 
     function createLine(text) {
         const publicPlace = document.createElement("p");
+        let textParagraph = document.createTextNode(text);
 
-        publicPlace.innerHTML = text;
+        publicPlace.appendChild(textParagraph);
         dataZipCode.appendChild(publicPlace);
     }
+
     axios.get(`https://viacep.com.br/ws/${zipCodeValue}/json/`)
         .then(response => {
             if (response.data.erro) {
